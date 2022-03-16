@@ -4,13 +4,42 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tailwind Starter Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <title>Portfolio</title>
     <link rel="stylesheet" href="tailwind.css" />
   </head>
   <body>
-    <h1 class="bg-indigo-700 text-violet-50 hover:bg-indigo-300">
-      Hello Tailwind CSS
-    </h1>
+    <main>
+      <header class="relative h-screen">
+        <div class="bg-img bg-cover">
+          <div class="container flex place-items-center sticky justify-between z-50">
+            <a href="index.html"><img class="w-96 md:p-4" src="./img/logo_name.svg" alt="logo"/></a>
+            <div class="topnav text-text-black text-lg flex place-items-center md:left-0 md:pt-1 md:gap-20">
+              <a class="hover:underline text-text-black hover:text-text-hover" href="about.html">About</a>
+              <a class="hover:underline text-text-black hover:text-text-hover" href="projects.html">Projects</a>
+              <a class="hover:underline text-text-black hover:text-text-hover" href="contact.html">Contact</a>
+            </div>
+          </div> 
+          <section class="opacity_box ">
+            <div class="bg-bg-white-box absolute z-20 top-0 opacity-50 slide-down-opacity h-full w-[45rem] ml-[39rem] grid place-items-center">
+              <div>
+                <h1 class="">Min skrivende h1'er</h1>
+              </div>
+              <div>
+                <h2 class="">Min skrivende h1'er</h2>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="scroll-down">
+          <img class="h-9 bounce-top z-50" src="./img/down-arrow.png" alt="">
+        </div>
+      </header>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script type="module" src="index.js"></script>
   </body>
+
 </html>

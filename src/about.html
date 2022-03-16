@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="tailwind.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <section class="grid grid-cols-4 grid-rows-2 bg-bg-color h-screen font-header-font place-content-center">
+          <section class="col-start-1 col-span-2">
+          <div>
+            <h1>Min skrivende h1'er</h1>
+          </div>
+          <div class="col-start-1 col-span-2 row-start-2">
+            <h2>Min skrivende h2'er</h2>
+          </div>
+        </section>
+    
+      <div class="bg-box-background bg-cover col-start-3 col-span-1 grid place-content-center p-16 slide-down1">
+        <a href="about.html" class="a-box hover:scale-up-center text-9xl font-header-font">AB <br> OUT </a>
+      </div>
+      <div class="bg-box1 col-start-4 col-span-1 place-content-center grid justify-center p-5 slide-down2">
+        <a href="contact.html" class="a-box text-9xl font-header-font hover:scale-up-center">CON <br> TACT</a>
+      </div>
+      <div class="bg-box2 col-start-3 col-span-2 row-start-2 place-content-center grid justify-center slide-in">
+        <a href="projects.html" class="a-box text-9xl font-header-font hover:scale-up-center">PROJECTS</a>
+      </div>
+      <div class="scroll-down">
+        <img class="h-9 bounce-top" src="./img/down-arrow.png" alt="">
+      </div>
+        </section> 
+      </header>
+      
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script type="module" src="index.js"></script>
+  </body>
+
+</html>
