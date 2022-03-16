@@ -2,6 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
+
+  
+  .typing-demo1 {
+    width: 18ch;
+    animation: typing 2.5s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: 'BiauKai';
+    font-size: 3em;
+  }
+
+  .typing-demo2 {
+    width: 21ch;
+    animation: typing 2.5s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: 'BiauKai';
+    font-size: 3em;
+
+  }
+  .typing-demo3 {
+    width: 26ch;
+    animation: typing 2.5s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: 'BiauKai';
+    font-size: 3em;
+
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+
+  
+  
   h1 {
     font-size: 4em;
     text-transform: uppercase;
@@ -56,6 +103,18 @@
   /* Navbar links */
   .topnav a {
     font-family: 'BiauKai';
+  }
+
+  .portfolio_animation {
+    font-family: 'BiauKai';
+    font-size: 8rem;
+    grid-column: 1/-1;
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    letter-spacing: 0.5rem;
+    animation-delay: 10s;
   }
   
 /* ***************************** ANIMATIONS *****************************  */
@@ -293,3 +352,46 @@
               transform: translateX(0);
     }
   }
+
+
+
+  /* portfolio animation */
+
+  .tracking-in-expand-fwd {
+	-webkit-animation: tracking-in-expand-fwd 2.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) 3s both;
+	        animation: tracking-in-expand-fwd 2.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) 3s both;
+}
+
+ @-webkit-keyframes tracking-in-expand-fwd {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-transform: translateZ(-700px);
+              transform: translateZ(-700px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-expand-fwd {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-transform: translateZ(-700px);
+              transform: translateZ(-700px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+  
