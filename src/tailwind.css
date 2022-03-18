@@ -4,48 +4,41 @@
 
 
   .typing-demo1 {
-    width: 18ch;
-    animation: typing 2.5s steps(22), blink .5s step-end infinite alternate;
+    --w: 18ch;
+    width: 0ch;
+    animation: typing 2.5s steps(22) forwards, blink .5s step-end infinite alternate ;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
     font-family: 'BiauKai';
     font-size: 3em;
+    animation-delay: 0.5s;
+
   }
 
   .typing-demo2 {
-    width: 21ch;
-    animation: typing 2.5s steps(22), blink .5s step-end infinite alternate;
+    --w: 21ch;
+    width: 0ch;
+    animation: typing 2.5s steps(22) forwards, blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
     font-family: 'BiauKai';
     font-size: 3em;
+    animation-delay: 2s;
 
   }
   .typing-demo3 {
-    width: 26ch;
-    animation: typing 2.5s steps(22), blink .5s step-end infinite alternate;
+    --w: 26ch;
+    width: 0ch;
+    animation: typing 2.5s steps(22) forwards, blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
     font-family: 'BiauKai';
     font-size: 3em;
-
+    animation-delay: 4s;
   }
-  
-  @keyframes typing {
-    from {
-      width: 0
-    }
-  }
-      
-  @keyframes blink {
-    50% {
-      border-color: transparent
-    }
-  }
-
   
   
   h1 {
@@ -117,6 +110,21 @@
   }
   
 /* ***************************** ANIMATIONS *****************************  */
+
+/* animerer typografien der bliver skrevet */
+@keyframes typing {
+  to {
+    width: var(--w);
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+
   
 /* laver typografi-animation */
 
@@ -129,57 +137,31 @@
 
   /* nav slider ned fra oven */
   .slide-down1 {
-	-webkit-animation: slide-down1 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: slide-down1 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
- @-webkit-keyframes slide-down1 {
-    0% {
-      -webkit-transform: translateY(-600px);
-              transform: translateY(-600px);
-    }
-    100% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-    }
-  }
 
   @keyframes slide-down1 {
     0% {
-        -webkit-transform: translateY(-600px);
         transform: translateY(-600px);
     }
     100% {
-      -webkit-transform: translateX(0px);
               transform: translateX(0px);
     }
   }
   
 
    .slide-down2 {
-	-webkit-animation: slide-down2 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: slide-down2 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
             /* animation-delay: 2s; */
     }
 
- @-webkit-keyframes slide-down2 {
-    0% {
-      -webkit-transform: translateY(-1000px);
-              transform: translateY(-1000px);
-    }
-    100% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-    }
-  }
 
   @keyframes slide-down2 {
     0% {
-        -webkit-transform: translateY(-1000px);
         transform: translateY(-1000px);
     }
     100% {
-      -webkit-transform: translateX(0px);
               transform: translateX(0px);
     }
   }
@@ -187,55 +169,29 @@
   /* nav slider ind fra højre side */
 
   .slide-in {
-	-webkit-animation: slide-in 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: slide-in 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
- @-webkit-keyframes slide-in {
-    0% {
-      -webkit-transform: translateY(2000px);
-              transform: translateY(2000px);
-    }
-    100% {
-      -webkit-transform: translateX(0px);
-              transform: translateX(0px);
-    }
-  }
 
   @keyframes slide-in {
     0% {
-        -webkit-transform: translateX(2000px);
         transform: translateX(2000px);
     }
     100% {
-      -webkit-transform: translateX(0px);
               transform: translateX(0px);
     }
   }
 
  /* nav forstørres ved hover */
   .scale-up-center {
-	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) ;
 	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) ;
 }
 
- @-webkit-keyframes scale-up-center {
-    0% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-    }
-    100% {
-      -webkit-transform: scale(1.5);
-              transform: scale(1.5);
-    }
-  }
   @keyframes scale-up-center {
     0% {
-      -webkit-transform: scale(1);
               transform: scale(1);
     }
     100% {
-      -webkit-transform: scale(1.5);
               transform: scale(1.5);
     }
   }
@@ -244,32 +200,12 @@
   /* bounce effekt på scroll knappen */
 
   .bounce-top {
-	-webkit-animation: bounce-top 2s infinite both;
 	        animation: bounce-top 2s infinite both;
 }
 
- @-webkit-keyframes bounce-top {
-    0% {
-      -webkit-transform: translateY(-45px);
-              transform: translateY(-45px);
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
-      opacity: 1;
-    }
-   
-    100% {
-      -webkit-transform: translateY(0px);
-              transform: translateY(0px);
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
-      opacity: 1;
-    }
-  }
   @keyframes bounce-top {
     0% {
-      -webkit-transform: translateY(-45px);
               transform: translateY(-45px);
-      -webkit-animation-timing-function: ease-in;
               animation-timing-function: ease-in;
       opacity: 1;
     }
@@ -277,42 +213,30 @@
       opacity: 1;
     }
     40% {
-      -webkit-transform: translateY(-24px);
               transform: translateY(-24px);
-      -webkit-animation-timing-function: ease-in;
               animation-timing-function: ease-in;
     }
     65% {
-      -webkit-transform: translateY(-12px);
               transform: translateY(-12px);
-      -webkit-animation-timing-function: ease-in;
               animation-timing-function: ease-in;
     }
     82% {
-      -webkit-transform: translateY(-6px);
               transform: translateY(-6px);
-      -webkit-animation-timing-function: ease-in;
               animation-timing-function: ease-in;
     }
     93% {
-      -webkit-transform: translateY(-4px);
               transform: translateY(-4px);
-      -webkit-animation-timing-function: ease-in;
               animation-timing-function: ease-in;
     }
     25%,
     55%,
     75%,
     87% {
-      -webkit-transform: translateY(0px);
               transform: translateY(0px);
-      -webkit-animation-timing-function: ease-out;
               animation-timing-function: ease-out;
     }
     100% {
-      -webkit-transform: translateY(0px);
               transform: translateY(0px);
-      -webkit-animation-timing-function: ease-out;
               animation-timing-function: ease-out;
       opacity: 1;
     }
@@ -326,28 +250,15 @@
 
   /* nav slider ned fra oven */
   .slide-down-opacity {
-	-webkit-animation: slide-down-opacity 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: slide-down-opacity 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
- @-webkit-keyframes slide-down-opacity {
-    0% {
-      -webkit-transform: translateY(-1000px);
-              transform: translateY(-1000px);
-    }
-    100% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-    }
-  }
 
   @keyframes slide-down-opacity {
     0% {
-        -webkit-transform: translateY(-1000px);
         transform: translateY(-1000px);
     }
     100% {
-      -webkit-transform: translateX(0);
               transform: translateX(0);
     }
   }
@@ -357,30 +268,12 @@
   /* portfolio animation */
 
   .tracking-in-expand-fwd {
-	-webkit-animation: tracking-in-expand-fwd 2.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) 2.2s both;
 	        animation: tracking-in-expand-fwd 2.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) 2.2s both;
 }
 
- @-webkit-keyframes tracking-in-expand-fwd {
-    0% {
-      letter-spacing: -0.5em;
-      -webkit-transform: translateZ(-700px);
-              transform: translateZ(-700px);
-      opacity: 0;
-    }
-    40% {
-      opacity: 0.6;
-    }
-    100% {
-      -webkit-transform: translateZ(0);
-              transform: translateZ(0);
-      opacity: 1;
-    }
-  }
   @keyframes tracking-in-expand-fwd {
     0% {
       letter-spacing: -0.5em;
-      -webkit-transform: translateZ(-700px);
               transform: translateZ(-700px);
       opacity: 0;
     }
@@ -388,7 +281,6 @@
       opacity: 0.6;
     }
     100% {
-      -webkit-transform: translateZ(0);
               transform: translateZ(0);
       opacity: 1;
     }
@@ -397,42 +289,15 @@
 
   /* slider logo ind */
   .slide-in-left {
-	-webkit-animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-/* ----------------------------------------------
- * Generated by Animista on 2022-3-16 23:23:47
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
-
-/**
- * ----------------------------------------
- * animation slide-in-left
- * ----------------------------------------
- */
- @-webkit-keyframes slide-in-left {
-    0% {
-      -webkit-transform: translateX(-1000px);
-              transform: translateX(-1000px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-      opacity: 1;
-    }
-  }
   @keyframes slide-in-left {
     0% {
-      -webkit-transform: translateX(-1000px);
               transform: translateX(-1000px);
       opacity: 0;
     }
     100% {
-      -webkit-transform: translateX(0);
               transform: translateX(0);
       opacity: 1;
     }
@@ -442,42 +307,15 @@
   /* slider navigationen ind */
   
   .slide-in-right {
-	-webkit-animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-/* ----------------------------------------------
- * Generated by Animista on 2022-3-16 23:25:1
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
-
-/**
- * ----------------------------------------
- * animation slide-in-right
- * ----------------------------------------
- */
- @-webkit-keyframes slide-in-right {
-    0% {
-      -webkit-transform: translateX(1000px);
-              transform: translateX(1000px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-      opacity: 1;
-    }
-  }
   @keyframes slide-in-right {
     0% {
-      -webkit-transform: translateX(1000px);
               transform: translateX(1000px);
       opacity: 0;
     }
     100% {
-      -webkit-transform: translateX(0);
               transform: translateX(0);
       opacity: 1;
     }
