@@ -18,7 +18,7 @@ module.exports = {
         backgroundImage: {
           'box-background': "url('./img/img.png')",
           'bg-img': "url('./img/bg_image.jpg')",
-
+          'bg-img-phone': "url('./img/bg_phone.jpg')",
       }
     },
   plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],

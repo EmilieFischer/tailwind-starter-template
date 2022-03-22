@@ -3,6 +3,33 @@
 @tailwind utilities;
 
 
+
+/* --------------------  BURGERMENU -------------------- */
+.hidden {
+  opacity: 0;
+  transform: translateX(100%);
+}
+/* -----positionerer 'X' i burgermenuen------ */
+nav {
+  display: grid;
+  text-align: end;
+  overflow: hidden;
+}
+
+#menuknap {
+  cursor: pointer;
+  font-size: 3rem;
+  color: #000000;
+}
+
+#menu {
+  text-align: end;
+  list-style-type: none;
+  transition: transform 0.3s;
+}
+
+
+
   .typing-demo1 {
     --w: 18ch;
     width: 0ch;
@@ -51,7 +78,6 @@
     font-size: 3em;
     text-transform: uppercase;
     font-family: 'BiauKai';
-
   }
   
   span {
@@ -84,23 +110,23 @@
     position: relative;
   }
 
-  
-  /* The navbar */
-  .topnav {
-    overflow: hidden;
-  }
+  .big-img-phone {
+    background-image: url("./img/bg_phone.jpg");
+    min-height: 100%;
+    position: relative;
 
+  }
   
   
   /* Navbar links */
-  .topnav a {
+  a {
     font-family: 'BiauKai';
   }
 
   .portfolio_animation {
     font-family: 'BiauKai';
-    font-size: 8rem;
     grid-column: 1/-1;
+    font-size: 3rem;
     grid-row: 2;
     display: flex;
     justify-content: center;
@@ -321,3 +347,24 @@
     }
   }
   
+
+  @media (min-width: 600px) {
+    /* --------------------  BURGERMENU -------------------- */
+    #menuknap {
+      display: none;
+    }
+  
+    #menu.hidden {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  
+    #menu li {
+      display: inline-block;
+      padding: 2rem;
+    }
+  
+    p {
+      text-align: justify;
+    }
+  }
